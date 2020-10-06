@@ -13,6 +13,10 @@
 		364CEA79252CB54F0013BB71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 364CEA77252CB54F0013BB71 /* Main.storyboard */; };
 		364CEA7B252CB5500013BB71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 364CEA7A252CB5500013BB71 /* Assets.xcassets */; };
 		364CEA7E252CB5500013BB71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 364CEA7C252CB5500013BB71 /* LaunchScreen.storyboard */; };
+		364CEA90252CBAC30013BB71 /* EditTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364CEA8E252CBAC30013BB71 /* EditTaskViewController.swift */; };
+		364CEA91252CBAC30013BB71 /* EditTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 364CEA8F252CBAC30013BB71 /* EditTaskViewController.xib */; };
+		364CEA95252CBADB0013BB71 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364CEA93252CBADB0013BB71 /* AddTaskViewController.swift */; };
+		364CEA96252CBADB0013BB71 /* AddTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 364CEA94252CBADB0013BB71 /* AddTaskViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		364CEA7A252CB5500013BB71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		364CEA7D252CB5500013BB71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		364CEA7F252CB5500013BB71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		364CEA8E252CBAC30013BB71 /* EditTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskViewController.swift; sourceTree = "<group>"; };
+		364CEA8F252CBAC30013BB71 /* EditTaskViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditTaskViewController.xib; sourceTree = "<group>"; };
+		364CEA93252CBADB0013BB71 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		364CEA94252CBADB0013BB71 /* AddTaskViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTaskViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +64,14 @@
 		364CEA70252CB54F0013BB71 /* ToDoListApp */ = {
 			isa = PBXGroup;
 			children = (
-				364CEA71252CB54F0013BB71 /* AppDelegate.swift */,
-				364CEA73252CB54F0013BB71 /* SceneDelegate.swift */,
 				364CEA75252CB54F0013BB71 /* ViewController.swift */,
 				364CEA77252CB54F0013BB71 /* Main.storyboard */,
+				364CEA93252CBADB0013BB71 /* AddTaskViewController.swift */,
+				364CEA94252CBADB0013BB71 /* AddTaskViewController.xib */,
+				364CEA8E252CBAC30013BB71 /* EditTaskViewController.swift */,
+				364CEA8F252CBAC30013BB71 /* EditTaskViewController.xib */,
+				364CEA71252CB54F0013BB71 /* AppDelegate.swift */,
+				364CEA73252CB54F0013BB71 /* SceneDelegate.swift */,
 				364CEA7A252CB5500013BB71 /* Assets.xcassets */,
 				364CEA7C252CB5500013BB71 /* LaunchScreen.storyboard */,
 				364CEA7F252CB5500013BB71 /* Info.plist */,
@@ -127,6 +139,8 @@
 				364CEA7E252CB5500013BB71 /* LaunchScreen.storyboard in Resources */,
 				364CEA7B252CB5500013BB71 /* Assets.xcassets in Resources */,
 				364CEA79252CB54F0013BB71 /* Main.storyboard in Resources */,
+				364CEA96252CBADB0013BB71 /* AddTaskViewController.xib in Resources */,
+				364CEA91252CBAC30013BB71 /* EditTaskViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +154,8 @@
 				364CEA76252CB54F0013BB71 /* ViewController.swift in Sources */,
 				364CEA72252CB54F0013BB71 /* AppDelegate.swift in Sources */,
 				364CEA74252CB54F0013BB71 /* SceneDelegate.swift in Sources */,
+				364CEA90252CBAC30013BB71 /* EditTaskViewController.swift in Sources */,
+				364CEA95252CBADB0013BB71 /* AddTaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
