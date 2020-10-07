@@ -10,7 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditTaskViewController" customModule="ToDoListApp" customModuleProvider="target">
             <connections>
-                <outlet property="taskToShow" destination="5gZ-MX-Sz4" id="MlB-ZB-cqA"/>
+                <outlet property="doneButton" destination="EXS-3t-hcx" id="7FI-V9-vhZ"/>
+                <outlet property="taskToShow" destination="yPB-uP-amJ" id="Q8e-nm-Dgb"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,27 +20,76 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5gZ-MX-Sz4">
-                    <rect key="frame" x="90" y="315" width="210" height="34"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8Z-7c-ZqX">
-                    <rect key="frame" x="184" y="567" width="46" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Button"/>
-                    <connections>
-                        <action selector="doneEdditing:" destination="-1" eventType="touchUpInside" id="El6-DJ-dHc"/>
-                    </connections>
-                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nbF-HN-6SR">
+                    <rect key="frame" x="16" y="501" width="382" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWX-mS-66x">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
+                            <color key="backgroundColor" red="0.01718364596" green="0.40057498670000002" blue="0.051049970729999998" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="ibG-5p-NFF"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" red="0.89552361940000003" green="0.94618600220000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="9"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="-1" eventType="touchUpInside" id="asf-P1-OHr"/>
+                            </connections>
+                        </button>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="245" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXS-3t-hcx">
+                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="40"/>
+                            <color key="backgroundColor" red="0.01718364596" green="0.40057498670000002" blue="0.051049970729999998" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                            <state key="normal" title="Done">
+                                <color key="titleColor" red="0.89552361940000003" green="0.94618600220000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="9"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="-1" eventType="touchUpInside" id="hok-1i-1by"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-2" translatesAutoresizingMaskIntoConstraints="NO" id="HPm-D0-uIu">
+                    <rect key="frame" x="16" y="44" width="382" height="358.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit your task below" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ES-Sr-T0N">
+                            <rect key="frame" x="0.0" y="0.0" width="382" height="23.5"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yPB-uP-amJ">
+                            <rect key="frame" x="0.0" y="21.5" width="382" height="337"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <gestureRecognizers/>
+                            <color key="textColor" red="0.89552361940000003" green="0.94618600220000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="5gZ-MX-Sz4" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="QhK-ks-2H0"/>
-                <constraint firstItem="5gZ-MX-Sz4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="TqH-yE-yoP"/>
-                <constraint firstItem="5gZ-MX-Sz4" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="kcd-Do-nQW"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5gZ-MX-Sz4" secondAttribute="trailing" constant="20" id="xcz-Mk-u4J"/>
+                <constraint firstItem="HPm-D0-uIu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="3p3-tf-Dx2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HPm-D0-uIu" secondAttribute="trailing" constant="16" id="61U-kO-e4a"/>
+                <constraint firstAttribute="bottom" secondItem="nbF-HN-6SR" secondAttribute="bottom" constant="355" id="8TR-oA-F1G"/>
+                <constraint firstItem="HPm-D0-uIu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="FOG-8z-Idx"/>
+                <constraint firstItem="HPm-D0-uIu" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.4" id="N32-yB-0nu"/>
+                <constraint firstItem="nbF-HN-6SR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="bCK-yh-Bvz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nbF-HN-6SR" secondAttribute="trailing" constant="16" id="te7-M7-Ic6"/>
             </constraints>
             <point key="canvasLocation" x="-146.37681159420291" y="-21.428571428571427"/>
         </view>

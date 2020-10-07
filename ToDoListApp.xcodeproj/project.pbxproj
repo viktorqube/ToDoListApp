@@ -17,6 +17,9 @@
 		364CEA91252CBAC30013BB71 /* EditTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 364CEA8F252CBAC30013BB71 /* EditTaskViewController.xib */; };
 		364CEA95252CBADB0013BB71 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364CEA93252CBADB0013BB71 /* AddTaskViewController.swift */; };
 		364CEA96252CBADB0013BB71 /* AddTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 364CEA94252CBADB0013BB71 /* AddTaskViewController.xib */; };
+		364CEA9A252DABB60013BB71 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364CEA99252DABB60013BB71 /* HomeViewController.swift */; };
+		364CEA9E252DB27E0013BB71 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364CEA9D252DB27E0013BB71 /* UIColor+Hex.swift */; };
+		364CEAA1252DB2880013BB71 /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364CEAA0252DB2880013BB71 /* CornerRadius.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		364CEA8F252CBAC30013BB71 /* EditTaskViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditTaskViewController.xib; sourceTree = "<group>"; };
 		364CEA93252CBADB0013BB71 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		364CEA94252CBADB0013BB71 /* AddTaskViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTaskViewController.xib; sourceTree = "<group>"; };
+		364CEA99252DABB60013BB71 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		364CEA9D252DB27E0013BB71 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		364CEAA0252DB2880013BB71 /* CornerRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,7 @@
 		364CEA70252CB54F0013BB71 /* ToDoListApp */ = {
 			isa = PBXGroup;
 			children = (
+				364CEA99252DABB60013BB71 /* HomeViewController.swift */,
 				364CEA75252CB54F0013BB71 /* ViewController.swift */,
 				364CEA77252CB54F0013BB71 /* Main.storyboard */,
 				364CEA93252CBADB0013BB71 /* AddTaskViewController.swift */,
@@ -75,6 +82,8 @@
 				364CEA7A252CB5500013BB71 /* Assets.xcassets */,
 				364CEA7C252CB5500013BB71 /* LaunchScreen.storyboard */,
 				364CEA7F252CB5500013BB71 /* Info.plist */,
+				364CEAA0252DB2880013BB71 /* CornerRadius.swift */,
+				364CEA9D252DB27E0013BB71 /* UIColor+Hex.swift */,
 			);
 			path = ToDoListApp;
 			sourceTree = "<group>";
@@ -151,11 +160,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				364CEA9E252DB27E0013BB71 /* UIColor+Hex.swift in Sources */,
 				364CEA76252CB54F0013BB71 /* ViewController.swift in Sources */,
 				364CEA72252CB54F0013BB71 /* AppDelegate.swift in Sources */,
 				364CEA74252CB54F0013BB71 /* SceneDelegate.swift in Sources */,
 				364CEA90252CBAC30013BB71 /* EditTaskViewController.swift in Sources */,
 				364CEA95252CBADB0013BB71 /* AddTaskViewController.swift in Sources */,
+				364CEAA1252DB2880013BB71 /* CornerRadius.swift in Sources */,
+				364CEA9A252DABB60013BB71 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
