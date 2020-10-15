@@ -1,33 +1,39 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  ToDoListApp
 //
-//  Created by Viktor Golovach on 06.10.2020.
+//  Created by Viktor Golovach on 07.10.2020.
 //
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ToDoListViewController: UIViewController, UITableViewDataSource {
     
     //MARK: - Outlets
     
-    @IBOutlet weak var tableView: UITableView!
-    let keyTask = "keyTask"
-    var tasks:[String] = []
+    @IBOutlet weak var tableViewCell: UITableView!
+    @IBOutlet weak var tableView:     UITableView!
+    @IBOutlet weak var toDoLabel:     UILabel!
     
+    let keyTask        = "keyTask"
+    var tasks:[String] = []
+    var lastTask = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.dataSource = self
-        tableView.delegate = self
+        tableView.delegate   = self
+        toDoLabel.textColor  = UIColor.init(hex: 0xb5ebe5)
         loadNewTask()
         
     }
+    
     //MARK: - TableView settings
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        tasks.count}
+        tasks.count
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellId", for: indexPath)
@@ -36,12 +42,13 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let object = tasks[indexPath.row]
-        let index = indexPath.row
-        let vc = EditTaskViewController()
-        vc.delegate = self
+        let object         = tasks[indexPath.row]
+        let index          = indexPath.row
+        let vc = AddEditTaskViewController()
+        vc.delegateEdit    = self
         vc.editedTaskIndex = index
-        vc.taskToEddit = object
+        vc.taskToEddit     = object
+        vc.screenType      = .edit
         present(vc, animated: true, completion: nil)
     }
     
@@ -58,16 +65,15 @@ class ViewController: UIViewController, UITableViewDataSource {
         saveTasks()
     }
     
-    @IBAction func addNewTaskButtonPressed(_ sender: UIBarButtonItem) {
-        let object = ""
-        let vc = AddTaskViewController()
-        vc.addNewTask = object
-        vc.delegate = self
+    // MARK: - Actions
+    
+    @IBAction func addNewTaskTaped(_ sender: UITapGestureRecognizer) {
+        let vc            = AddEditTaskViewController()
+        vc.delegateCreate = self
+        vc.screenType     = .create
         present(vc, animated: true, completion: nil)
-        
     }
-   
-
+    
     func didAddTask(task: String) {
         tasks.insert(task, at: 0)
         saveTasks()
@@ -86,21 +92,13 @@ class ViewController: UIViewController, UITableViewDataSource {
             tableView.reloadData()
         }
     }
-    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        if let header = view as? UITableViewHeaderFooterView {
-            header.backgroundView?.backgroundColor = .red
-            header.textLabel?.textColor = UIColor.yellow
+    
+    func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
+        if let footer = view as? UITableViewHeaderFooterView {
+            footer.textLabel?.textColor = UIColor.init(hex: 0xd47c3f)
+            footer.backgroundView?.backgroundColor = .white
         }
     }
-    
-        func tableView(_ tableView: UITableView, willDisplayFooterView view: UIView, forSection section: Int) {
-            if let footer = view as? UITableViewHeaderFooterView {
-                footer.textLabel?.textColor = UIColor.init(hex: 0x1e963e)
-                footer.backgroundView?.backgroundColor = UIColor.green
-        
-    }
-    
-}
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let action = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completion) in
@@ -110,7 +108,7 @@ class ViewController: UIViewController, UITableViewDataSource {
             completion(true)
         }
         action.image = #imageLiteral(resourceName: "trash")
-        action.backgroundColor = UIColor.init(hex: 0xa32626)
+        action.backgroundColor = UIColor.init(hex: 0xb5ebe5)
         return UISwipeActionsConfiguration(actions: [action])
     }
     
@@ -122,16 +120,16 @@ class ViewController: UIViewController, UITableViewDataSource {
             completion(true)
         }
         action.image = #imageLiteral(resourceName: "done")
-        action.backgroundColor = UIColor.init(hex: 0x26a347)
+        action.backgroundColor = UIColor.init(hex: 0xb5ebe5)
         return UISwipeActionsConfiguration(actions: [action])
     }
 }
-    
-    extension ViewController: UITableViewDelegate {
 
+extension ToDoListViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         return "                           \(tasks.count) To Do's to finish"
-
+        
     }
 }
 

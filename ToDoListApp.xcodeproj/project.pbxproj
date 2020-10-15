@@ -9,35 +9,35 @@
 /* Begin PBXBuildFile section */
 		364CEA72252CB54F0013BB71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364CEA71252CB54F0013BB71 /* AppDelegate.swift */; };
 		364CEA74252CB54F0013BB71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364CEA73252CB54F0013BB71 /* SceneDelegate.swift */; };
-		364CEA76252CB54F0013BB71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364CEA75252CB54F0013BB71 /* ViewController.swift */; };
+		364CEA76252CB54F0013BB71 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364CEA75252CB54F0013BB71 /* ToDoListViewController.swift */; };
 		364CEA79252CB54F0013BB71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 364CEA77252CB54F0013BB71 /* Main.storyboard */; };
-		364CEA7B252CB5500013BB71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 364CEA7A252CB5500013BB71 /* Assets.xcassets */; };
 		364CEA7E252CB5500013BB71 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 364CEA7C252CB5500013BB71 /* LaunchScreen.storyboard */; };
-		364CEA90252CBAC30013BB71 /* EditTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364CEA8E252CBAC30013BB71 /* EditTaskViewController.swift */; };
-		364CEA91252CBAC30013BB71 /* EditTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 364CEA8F252CBAC30013BB71 /* EditTaskViewController.xib */; };
-		364CEA95252CBADB0013BB71 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364CEA93252CBADB0013BB71 /* AddTaskViewController.swift */; };
-		364CEA96252CBADB0013BB71 /* AddTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 364CEA94252CBADB0013BB71 /* AddTaskViewController.xib */; };
 		364CEA9A252DABB60013BB71 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364CEA99252DABB60013BB71 /* HomeViewController.swift */; };
 		364CEA9E252DB27E0013BB71 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364CEA9D252DB27E0013BB71 /* UIColor+Hex.swift */; };
-		364CEAA1252DB2880013BB71 /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364CEAA0252DB2880013BB71 /* CornerRadius.swift */; };
+		364CEAA1252DB2880013BB71 /* UIView+CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364CEAA0252DB2880013BB71 /* UIView+CornerRadius.swift */; };
+		3669657125388F19005525E9 /* UIView+ColorGradientExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3669657025388F19005525E9 /* UIView+ColorGradientExtension.swift */; };
+		3669657525389049005525E9 /* UIView+ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3669657425389049005525E9 /* UIView+ColorConstants.swift */; };
+		366E9C3F2534A35B00C5F2BD /* AddEditTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366E9C3D2534A35B00C5F2BD /* AddEditTaskViewController.swift */; };
+		366E9C402534A35B00C5F2BD /* AddEditTaskViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 366E9C3E2534A35B00C5F2BD /* AddEditTaskViewController.xib */; };
+		366E9C682535ABC700C5F2BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 366E9C672535ABC700C5F2BD /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		364CEA6E252CB54F0013BB71 /* ToDoListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		364CEA71252CB54F0013BB71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		364CEA73252CB54F0013BB71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		364CEA75252CB54F0013BB71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		364CEA75252CB54F0013BB71 /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
 		364CEA78252CB54F0013BB71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		364CEA7A252CB5500013BB71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		364CEA7D252CB5500013BB71 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		364CEA7F252CB5500013BB71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		364CEA8E252CBAC30013BB71 /* EditTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskViewController.swift; sourceTree = "<group>"; };
-		364CEA8F252CBAC30013BB71 /* EditTaskViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditTaskViewController.xib; sourceTree = "<group>"; };
-		364CEA93252CBADB0013BB71 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
-		364CEA94252CBADB0013BB71 /* AddTaskViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTaskViewController.xib; sourceTree = "<group>"; };
 		364CEA99252DABB60013BB71 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		364CEA9D252DB27E0013BB71 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
-		364CEAA0252DB2880013BB71 /* CornerRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
+		364CEAA0252DB2880013BB71 /* UIView+CornerRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadius.swift"; sourceTree = "<group>"; };
+		3669657025388F19005525E9 /* UIView+ColorGradientExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ColorGradientExtension.swift"; sourceTree = "<group>"; };
+		3669657425389049005525E9 /* UIView+ColorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ColorConstants.swift"; sourceTree = "<group>"; };
+		366E9C3D2534A35B00C5F2BD /* AddEditTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditTaskViewController.swift; sourceTree = "<group>"; };
+		366E9C3E2534A35B00C5F2BD /* AddEditTaskViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddEditTaskViewController.xib; sourceTree = "<group>"; };
+		366E9C672535ABC700C5F2BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,19 +71,19 @@
 			isa = PBXGroup;
 			children = (
 				364CEA99252DABB60013BB71 /* HomeViewController.swift */,
-				364CEA75252CB54F0013BB71 /* ViewController.swift */,
+				364CEA75252CB54F0013BB71 /* ToDoListViewController.swift */,
 				364CEA77252CB54F0013BB71 /* Main.storyboard */,
-				364CEA93252CBADB0013BB71 /* AddTaskViewController.swift */,
-				364CEA94252CBADB0013BB71 /* AddTaskViewController.xib */,
-				364CEA8E252CBAC30013BB71 /* EditTaskViewController.swift */,
-				364CEA8F252CBAC30013BB71 /* EditTaskViewController.xib */,
+				366E9C3D2534A35B00C5F2BD /* AddEditTaskViewController.swift */,
+				366E9C3E2534A35B00C5F2BD /* AddEditTaskViewController.xib */,
 				364CEA71252CB54F0013BB71 /* AppDelegate.swift */,
 				364CEA73252CB54F0013BB71 /* SceneDelegate.swift */,
-				364CEA7A252CB5500013BB71 /* Assets.xcassets */,
 				364CEA7C252CB5500013BB71 /* LaunchScreen.storyboard */,
 				364CEA7F252CB5500013BB71 /* Info.plist */,
-				364CEAA0252DB2880013BB71 /* CornerRadius.swift */,
+				364CEAA0252DB2880013BB71 /* UIView+CornerRadius.swift */,
+				3669657025388F19005525E9 /* UIView+ColorGradientExtension.swift */,
+				3669657425389049005525E9 /* UIView+ColorConstants.swift */,
 				364CEA9D252DB27E0013BB71 /* UIColor+Hex.swift */,
+				366E9C672535ABC700C5F2BD /* Assets.xcassets */,
 			);
 			path = ToDoListApp;
 			sourceTree = "<group>";
@@ -146,10 +146,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				364CEA7E252CB5500013BB71 /* LaunchScreen.storyboard in Resources */,
-				364CEA7B252CB5500013BB71 /* Assets.xcassets in Resources */,
+				366E9C402534A35B00C5F2BD /* AddEditTaskViewController.xib in Resources */,
+				366E9C682535ABC700C5F2BD /* Assets.xcassets in Resources */,
 				364CEA79252CB54F0013BB71 /* Main.storyboard in Resources */,
-				364CEA96252CBADB0013BB71 /* AddTaskViewController.xib in Resources */,
-				364CEA91252CBAC30013BB71 /* EditTaskViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,12 +160,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				364CEA9E252DB27E0013BB71 /* UIColor+Hex.swift in Sources */,
-				364CEA76252CB54F0013BB71 /* ViewController.swift in Sources */,
+				364CEA76252CB54F0013BB71 /* ToDoListViewController.swift in Sources */,
 				364CEA72252CB54F0013BB71 /* AppDelegate.swift in Sources */,
 				364CEA74252CB54F0013BB71 /* SceneDelegate.swift in Sources */,
-				364CEA90252CBAC30013BB71 /* EditTaskViewController.swift in Sources */,
-				364CEA95252CBADB0013BB71 /* AddTaskViewController.swift in Sources */,
-				364CEAA1252DB2880013BB71 /* CornerRadius.swift in Sources */,
+				3669657125388F19005525E9 /* UIView+ColorGradientExtension.swift in Sources */,
+				366E9C3F2534A35B00C5F2BD /* AddEditTaskViewController.swift in Sources */,
+				364CEAA1252DB2880013BB71 /* UIView+CornerRadius.swift in Sources */,
+				3669657525389049005525E9 /* UIView+ColorConstants.swift in Sources */,
 				364CEA9A252DABB60013BB71 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -315,12 +315,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z5KPKQ9YJV;
 				INFOPLIST_FILE = ToDoListApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Viktor.ToDoListApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Viktor.ToDoListApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -333,12 +334,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z5KPKQ9YJV;
 				INFOPLIST_FILE = ToDoListApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Viktor.ToDoListApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Viktor.ToDoListApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

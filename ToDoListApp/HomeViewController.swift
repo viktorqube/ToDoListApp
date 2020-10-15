@@ -8,37 +8,49 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
-    var advice = ["Чтобы сделать задачу, нужно встать с дивана!",
-                         "Задача сама себя не сделает!",
-                         "Или ты задачу, или лень тебя!",
-                         "Встань и делай!",
-                         "Ты еще тут?",
-                         "Хватит тыкать!",
-                         "Move, Move, Move!",
-                         "Тыкни плюсик, сделай задачу и радуйся!",
-                         "Почему так много задач? Потому, что ты сидишь!",
-                         "Лень хороша, когда ты спишь!",
-                         "Поставил цель - иди, не можешь - ползи!",
-                         "Все проблемы в твоей голове!",
+    
+    var advice = ["Задача сама себя не сделает!",
+                  "Или ты задачу, или лень тебя!",
+                  "Встань и делай!",
+                  "Ты еще тут?",
+                  "Хватит тыкать!",
+                  "Move, Move, Move!",
+                  "Сделал дело, сделай еще!",
+                  "Лень хороша, когда ты спишь!",
+                  "Поставил цель - делай!",
+                  "Все проблемы в твоей голове!",
     ]
     
-    @IBOutlet weak var adviceTextLabel: UITextView!
+    //MARK: - Outlets
     
-
+//    @IBOutlet weak var lastTaskLabel: UILabel!
+    @IBOutlet weak var stackWeather: UIStackView!
+    @IBOutlet weak var weatherLabel: UILabel!
+    @IBOutlet weak var stackAdvice:  UIStackView!
+    @IBOutlet weak var adviceLabel:  UILabel!
+    @IBOutlet weak var adviceButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
-       
+
+        adviceLabel.textColor        = UIColor.init(hex: 0xd47c3f)
+        weatherLabel.textColor       = UIColor.init(hex: 0xd47c3f)
+        stackAdvice.backgroundColor  = UIColor.init(hex: 0xb5ebe5)
+        stackWeather.backgroundColor = .clear
+        view.setGradientBackground(colorOne: UIColor.init(hex: 0xb5ebe5), colorTwo: UIColor.init(hex: 0xffffff))
     }
+    
+//    @IBAction func lastTaskButtonPressed(_ sender: UIButton) {
+//    }
     
     @IBAction func adviceButtonPressed(_ sender: UIButton) {
-        adviceTextLabel.text = advice.randomElement()
+        adviceLabel.text = advice.randomElement()
     }
+
+  
+
     
-    @IBAction func moveToToDoListButtonPressed(_ sender: UIButton) {
-    }
     
 }
+
+

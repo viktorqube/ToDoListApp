@@ -1,8 +1,8 @@
 //
-//  AppDelegate.swift
+//  HomeViewController.swift
 //  ToDoListApp
 //
-//  Created by Viktor Golovach on 06.10.2020.
+//  Created by Viktor Golovach on 07.10.2020.
 //
 
 import UIKit
@@ -10,10 +10,14 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+   
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        UITabBar.appearance().barTintColor = UIColor.init(hex: 0xb5ebe5)
+        UITabBar.appearance().tintColor = UIColor.init(hex: 0xd47c3f)
+
+        
         return true
     }
 
