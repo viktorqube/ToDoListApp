@@ -11,13 +11,13 @@ class ToDoListViewController: UIViewController, UITableViewDataSource {
     
     //MARK: - Outlets
     
-    @IBOutlet weak var tableViewCell: UITableView!
-    @IBOutlet weak var tableView:     UITableView!
-    @IBOutlet weak var toDoLabel:     UILabel!
+    @IBOutlet weak private var tableViewCell: UITableView!
+    @IBOutlet weak private var tableView:     UITableView!
+    @IBOutlet weak private var toDoLabel:     UILabel!
     
-    let keyTask        = "keyTask"
-    var tasks:[String] = []
-    var lastTask = ""
+    private let keyTask        = "keyTask"
+    private var tasks:[String] = []
+    private var lastTask = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,7 +67,7 @@ class ToDoListViewController: UIViewController, UITableViewDataSource {
     
     // MARK: - Actions
     
-    @IBAction func addNewTaskTaped(_ sender: UITapGestureRecognizer) {
+    @IBAction private func addNewTaskTaped(_ sender: UITapGestureRecognizer) {
         let vc            = AddEditTaskViewController()
         vc.delegateCreate = self
         vc.screenType     = .create

@@ -35,9 +35,9 @@ class AddEditTaskViewController: UIViewController, UITextViewDelegate {
         
         self.view.backgroundColor = UIColor.init(hex: 0x64a165)
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector(keyboardWillShow(with:)),
-                                               name: UIResponder.keyboardWillShowNotification,
-                                               object: nil
+        selector: #selector(keyboardWillShow(with:)),
+        name: UIResponder.keyboardWillShowNotification,
+        object: nil
         )
         setupView()
         doneButton.backgroundColor   = UIColor.init(hex: 0xccfff8)

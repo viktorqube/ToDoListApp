@@ -1,8 +1,8 @@
 //
-//  CornerRadius.swift
-//  bar
+//  UIView+CornerRadius.swift
+//  ToDoListApp
 //
-//  Created by Viktor Golovach on 27.09.2020.
+//  Created by Viktor Golovach on 15.10.2020.
 //
 
 import UIKit
@@ -18,7 +18,7 @@ extension UIView {
             layer.masksToBounds = newValue > 0
         }
     }
-
+    
     @IBInspectable
     var borderrWidth: CGFloat {
         get {
@@ -28,7 +28,7 @@ extension UIView {
             layer.borderWidth = newValue
         }
     }
-
+    
     @IBInspectable
     var borderrColor: UIColor? {
         get {
@@ -39,7 +39,7 @@ extension UIView {
             layer.borderColor = newValue?.cgColor
         }
     }
-
+    
     @IBInspectable
     var shadowRadius: CGFloat {
         get {
@@ -52,7 +52,7 @@ extension UIView {
             layer.shadowRadius = newValue
         }
     }
-
+    
     func addGradientBackgound(firstColor: UIColor, SecondColor: UIColor, topToBottom: Bool) {
         layoutIfNeeded()
         removeGradients()
@@ -65,7 +65,7 @@ extension UIView {
         gradient.name = "grad"
         layer.insertSublayer(gradient, at: 0)
     }
-
+    
     func removeGradients() {
         layer.sublayers?.forEach { layer in
             if layer.name == "grad" {
@@ -73,13 +73,13 @@ extension UIView {
             }
         }
     }
-
+    
     func round(corners: CACornerMask, radii: Int, withBorder _: UIColor? = nil) {
         clipsToBounds = true
         layer.cornerRadius = CGFloat(radii)
         layer.maskedCorners = corners
     }
-
+    
     func rotate() {
         let rotation: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
         rotation.toValue = NSNumber(value: Double.pi * 2)
@@ -88,7 +88,7 @@ extension UIView {
         rotation.repeatCount = Float.greatestFiniteMagnitude
         layer.add(rotation, forKey: "rotationAnimation")
     }
-
+    
     @discardableResult
     func viewFromNibForClass<T>() -> T where T: UIView {
         let bundle = Bundle(for: type(of: self))

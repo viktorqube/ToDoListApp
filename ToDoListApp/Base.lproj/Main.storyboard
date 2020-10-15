@@ -31,7 +31,7 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Motivation? Press &quot;?&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FsV-nY-an0">
                                         <rect key="frame" x="88" y="0.0" width="294" height="100"/>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -89,13 +89,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="listlabel" translatesAutoresizingMaskIntoConstraints="NO" id="8QE-Ru-uP3">
-                                <rect key="frame" x="0.0" y="653" width="160" height="160"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="160" id="iop-fK-JOp"/>
-                                    <constraint firstAttribute="width" constant="160" id="yFB-vO-O5A"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VHB-GK-Yuq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -103,12 +96,10 @@
                             <constraint firstItem="BMH-KY-Hf5" firstAttribute="leading" secondItem="VHB-GK-Yuq" secondAttribute="leading" constant="16" id="0HT-dY-NMb"/>
                             <constraint firstItem="RPl-Ut-sf9" firstAttribute="leading" secondItem="VHB-GK-Yuq" secondAttribute="leading" constant="16" id="2ma-mK-RrE"/>
                             <constraint firstItem="VHB-GK-Yuq" firstAttribute="trailing" secondItem="RPl-Ut-sf9" secondAttribute="trailing" constant="16" id="5KU-BS-U5G"/>
-                            <constraint firstItem="8QE-Ru-uP3" firstAttribute="bottom" secondItem="VHB-GK-Yuq" secondAttribute="bottom" id="7Fc-h8-OAw"/>
                             <constraint firstItem="BMH-KY-Hf5" firstAttribute="top" secondItem="VHB-GK-Yuq" secondAttribute="top" constant="10" id="AQ4-VD-Ksq"/>
                             <constraint firstItem="RPl-Ut-sf9" firstAttribute="top" secondItem="BMH-KY-Hf5" secondAttribute="bottom" constant="173" id="G5e-lu-ggr"/>
                             <constraint firstItem="VHB-GK-Yuq" firstAttribute="trailing" secondItem="RPl-Ut-sf9" secondAttribute="trailing" constant="16" id="QyF-cE-P38"/>
                             <constraint firstItem="BMH-KY-Hf5" firstAttribute="leading" secondItem="VHB-GK-Yuq" secondAttribute="leading" constant="16" id="cRw-98-gpc"/>
-                            <constraint firstItem="8QE-Ru-uP3" firstAttribute="leading" secondItem="VHB-GK-Yuq" secondAttribute="leading" id="d7Y-OY-Wy5"/>
                             <constraint firstItem="RPl-Ut-sf9" firstAttribute="leading" secondItem="VHB-GK-Yuq" secondAttribute="leading" constant="16" id="eEX-c1-Ey1"/>
                             <constraint firstItem="BMH-KY-Hf5" firstAttribute="leading" secondItem="VHB-GK-Yuq" secondAttribute="leading" constant="16" id="rJ1-Co-meI"/>
                             <constraint firstItem="BMH-KY-Hf5" firstAttribute="top" secondItem="VHB-GK-Yuq" secondAttribute="top" constant="10" id="yb0-kE-UjS"/>
@@ -236,7 +227,6 @@
         <image name="add" width="100" height="100"/>
         <image name="home 35" width="32" height="32"/>
         <image name="list 35" width="32" height="32"/>
-        <image name="listlabel" width="5000" height="5000"/>
         <image name="q" width="50" height="50"/>
         <image name="weather" width="50" height="50"/>
         <systemColor name="systemBackgroundColor">
