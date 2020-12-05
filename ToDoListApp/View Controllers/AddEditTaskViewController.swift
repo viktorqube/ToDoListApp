@@ -5,25 +5,23 @@
 //  Created by Viktor Golovach on 07.10.2020.
 //
 
+enum ScreenType {
+    case edit
+    case create
+}
+
 import UIKit
-
-
 
 class AddEditTaskViewController: UIViewController, UITextViewDelegate {
     
-    enum ScreenType {
-        case edit
-        case create
-    }
-    
-    //MARK: - Outlets
-    
-   
+    // MARK: - Properties
     var screenType:                      ScreenType!
     weak var delegateEdit:               ToDoListViewController?
     weak var delegateCreate:             ToDoListViewController?
     var taskToEddit:                     String = ""
     var editedTaskIndex:                 Int = 0
+    
+    //MARK: - Outlets
     @IBOutlet weak var taskLabel:        UILabel!
     @IBOutlet weak var taskToShow:       UITextView!
     @IBOutlet weak var doneButton:       UIButton!
@@ -33,24 +31,34 @@ class AddEditTaskViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.init(hex: 0x64a165)
         NotificationCenter.default.addObserver(self,
-        selector: #selector(keyboardWillShow(with:)),
-        name: UIResponder.keyboardWillShowNotification,
-        object: nil
+                                               selector: #selector(keyboardWillShow(with:)),
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: nil
         )
+        
         setupView()
-        doneButton.backgroundColor   = UIColor.init(hex: 0xccfff8)
-        doneButton.tintColor         = UIColor.init(hex: 0xd47c3f)
-        cancelButton.backgroundColor = UIColor.init(hex: 0xccfff8)
-        cancelButton.tintColor       = UIColor.init(hex: 0xd47c3f)
-        taskToShow.delegate          = self
-        taskToShow.becomeFirstResponder()
-        taskToShow.textColor         = .white
-        taskLabel.textColor          = .white
-        self.view.backgroundColor    = UIColor.init(hex: 0xb5ebe5)
+        UIElementsSetup()
+        
         
     }
+    
+    func UIElementsSetup() {
+        view.setGradientBackground(
+            colorOne: UIColor.init(hex: 0x9cfff7),
+            colorTwo: UIColor.init(hex: 0xf69272))
+        doneButton.backgroundColor = UIColor.init(hex: 0xb5ebe5)
+        doneButton.tintColor = UIColor.init(hex: 0xf69272)
+        cancelButton.backgroundColor = UIColor.init(hex: 0xb5ebe5)
+        cancelButton.tintColor = UIColor.init(hex: 0xf69272)
+        taskToShow.textColor = UIColor.white
+        taskLabel.textColor = UIColor.white
+        taskToShow.delegate = self
+        taskToShow.becomeFirstResponder()
+    }
+    
+    
+    
     
     @objc func keyboardWillShow(with notification: NSNotification) {
         let key = "UIKeyboardFrameEndUserInfoKey"
@@ -70,10 +78,10 @@ class AddEditTaskViewController: UIViewController, UITextViewDelegate {
     //MARK: - Actions
     
     @IBAction func doneButtonPressed(_ sender: UIButton) {
+        sender.shake()
+        
         guard let task = taskToShow.text, task.count > 0
-        else {
-            return
-        }
+        else {return}
         switch screenType {
         case .edit:
             delegateEdit?.didEditTask(task: taskToShow.text!, index: editedTaskIndex)
@@ -106,21 +114,25 @@ class AddEditTaskViewController: UIViewController, UITextViewDelegate {
     
     func textViewDidChange(_ textView: UITextView) {
         if doneButton.isHidden {
-            doneButton.isHidden = false
-            UIView.animate(withDuration: 0.3) {
-                self.view.layoutIfNeeded()
-                self.taskToShow.text.removeAll()
+            UIView.animate(withDuration: 0.5){
+                self.doneButton.isHidden = false
             }
+            view.layoutIfNeeded()
             switch screenType {
             case .edit:
-                taskLabel.text = taskToEddit
+                taskToShow.text = taskToEddit
             case .create:
-                print("create mod")
+                UIView.animate(withDuration: 0.3){
+                    self.taskToShow.text.removeAll()
+                }
             case .none:
                 print("error")
             }
         }
     }
+    
+    
+    
     
     
     
