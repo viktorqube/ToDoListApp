@@ -25,6 +25,9 @@
 		36D13DC725406DE800A93A55 /* UIButton+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D13DC625406DE800A93A55 /* UIButton+extension.swift */; };
 		48A03A6C04779C5CF9ACFCB5 /* Pods_ToDoListApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C4364A1CBFA38370B56974 /* Pods_ToDoListApp.framework */; };
 		528400882577C1DD006EEEBD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528400872577C1DD006EEEBD /* CoreLocation.framework */; };
+		5288BBE3259220D500F8F1D3 /* ChuckNorrisSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5288BBE2259220D500F8F1D3 /* ChuckNorrisSetup.swift */; };
+		5288BBE72592224900F8F1D3 /* QuotesNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5288BBE62592224900F8F1D3 /* QuotesNetworkService.swift */; };
+		529F08E1257E69130053882B /* CompletedTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529F08E0257E69130053882B /* CompletedTasksViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,9 @@
 		366E9C672535ABC700C5F2BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36D13DC625406DE800A93A55 /* UIButton+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+extension.swift"; sourceTree = "<group>"; };
 		528400872577C1DD006EEEBD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		5288BBE2259220D500F8F1D3 /* ChuckNorrisSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisSetup.swift; sourceTree = "<group>"; };
+		5288BBE62592224900F8F1D3 /* QuotesNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesNetworkService.swift; sourceTree = "<group>"; };
+		529F08E0257E69130053882B /* CompletedTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedTasksViewController.swift; sourceTree = "<group>"; };
 		8F01FADA0C9C07A4D9A32325 /* Pods-ToDoListApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoListApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToDoListApp/Pods-ToDoListApp.debug.xcconfig"; sourceTree = "<group>"; };
 		97465762D8CDC372B177CE09 /* Pods-ToDoListApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDoListApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ToDoListApp/Pods-ToDoListApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,7 +101,7 @@
 		364CEA70252CB54F0013BB71 /* ToDoListApp */ = {
 			isa = PBXGroup;
 			children = (
-				36698C4A257509920001CB4A /* WeatherAPISettings */,
+				36698C4A257509920001CB4A /* WeatherQuotesAPISettings */,
 				366965792538AA1D005525E9 /* View Controllers */,
 				364CEA77252CB54F0013BB71 /* Main.storyboard */,
 				366E9C3E2534A35B00C5F2BD /* AddEditTaskViewController.xib */,
@@ -115,6 +121,7 @@
 				364CEA99252DABB60013BB71 /* HomeViewController.swift */,
 				364CEA75252CB54F0013BB71 /* ToDoListViewController.swift */,
 				366E9C3D2534A35B00C5F2BD /* AddEditTaskViewController.swift */,
+				529F08E0257E69130053882B /* CompletedTasksViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -131,13 +138,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		36698C4A257509920001CB4A /* WeatherAPISettings */ = {
+		36698C4A257509920001CB4A /* WeatherQuotesAPISettings */ = {
 			isa = PBXGroup;
 			children = (
 				36698C4C25750A6B0001CB4A /* ForecastSetup.swift */,
 				36698C4F25750ACB0001CB4A /* NetworkService.swift */,
+				5288BBE2259220D500F8F1D3 /* ChuckNorrisSetup.swift */,
+				5288BBE62592224900F8F1D3 /* QuotesNetworkService.swift */,
 			);
-			path = WeatherAPISettings;
+			path = WeatherQuotesAPISettings;
 			sourceTree = "<group>";
 		};
 		5FDD686CA41FCB8E3EC57E67 /* Frameworks */ = {
@@ -260,8 +269,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				529F08E1257E69130053882B /* CompletedTasksViewController.swift in Sources */,
 				364CEA9E252DB27E0013BB71 /* UIColor+Hex.swift in Sources */,
 				364CEA76252CB54F0013BB71 /* ToDoListViewController.swift in Sources */,
+				5288BBE72592224900F8F1D3 /* QuotesNetworkService.swift in Sources */,
 				364CEA72252CB54F0013BB71 /* AppDelegate.swift in Sources */,
 				364CEA74252CB54F0013BB71 /* SceneDelegate.swift in Sources */,
 				3669657125388F19005525E9 /* UIView+ColorGradientExtension.swift in Sources */,
@@ -270,6 +281,7 @@
 				36698C4D25750A6B0001CB4A /* ForecastSetup.swift in Sources */,
 				3669657525389049005525E9 /* UIView+ColorConstants.swift in Sources */,
 				364CEA9A252DABB60013BB71 /* HomeViewController.swift in Sources */,
+				5288BBE3259220D500F8F1D3 /* ChuckNorrisSetup.swift in Sources */,
 				36698C5025750ACB0001CB4A /* NetworkService.swift in Sources */,
 				36D13DC725406DE800A93A55 /* UIButton+extension.swift in Sources */,
 			);

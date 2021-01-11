@@ -44,13 +44,12 @@ class AddEditTaskViewController: UIViewController, UITextViewDelegate {
     }
     
     func UIElementsSetup() {
-        view.setGradientBackground(
-            colorOne: UIColor.init(hex: 0x9cfff7),
-            colorTwo: UIColor.init(hex: 0xf69272))
-        doneButton.backgroundColor = UIColor.init(hex: 0xb5ebe5)
-        doneButton.tintColor = UIColor.init(hex: 0xf69272)
-        cancelButton.backgroundColor = UIColor.init(hex: 0xb5ebe5)
-        cancelButton.tintColor = UIColor.init(hex: 0xf69272)
+        view.setGradientBackground(colorOne: UIColor.init(hex: 0x9cfff7),
+                                   colorTwo: UIColor.init(hex: 0x000000))
+        doneButton.backgroundColor = UIColor.init(hex: 0x5d9893)
+        doneButton.tintColor = .white
+        cancelButton.backgroundColor = UIColor.init(hex: 0x5d9893)
+        cancelButton.tintColor = .white
         taskToShow.textColor = UIColor.white
         taskLabel.textColor = UIColor.white
         taskToShow.delegate = self
@@ -80,7 +79,7 @@ class AddEditTaskViewController: UIViewController, UITextViewDelegate {
     @IBAction func doneButtonPressed(_ sender: UIButton) {
         sender.shake()
         
-        guard let task = taskToShow.text, task.count > 0
+        guard let task = taskToShow.text, task.count > 0, task != " ", task != "  ", task != "   "
         else {return}
         switch screenType {
         case .edit:
